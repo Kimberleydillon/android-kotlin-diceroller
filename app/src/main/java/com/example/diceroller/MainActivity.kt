@@ -2,15 +2,14 @@ package com.example.diceroller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.diceroller.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        // Creating a binding object for the main_activity.xml layout
         binding = ActivityMainBinding.inflate(layoutInflater)
-
-// Referencing a view with the ID roll_button
-        binding.rollButton
+        val view = binding.root
+        setContentView(view)
     }
 }
